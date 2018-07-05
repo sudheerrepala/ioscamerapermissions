@@ -11,7 +11,7 @@
         <platform name="ios">
             <preference name="CAMERA_USAGE_DESCRIPTION" default="need access to take a snap and upload receipts for expenses"/>
             <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-                <string>need access to take a snap upload receipts for expenses</string>
+                <string>need access to take a snap and upload receipts for expenses</string>
             </config-file>
 
 
