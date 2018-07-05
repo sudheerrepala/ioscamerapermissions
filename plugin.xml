@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-plugin-ios-tg-permissions" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>iOS TG Permissions</name>
+    <author>Andreas Jacob (http://cordobo.com/) --- Sudheer Reddy </author>
+    <description>Cordova / PhoneGap Plugin Permission Settings for NSCameraUsageDescription, NSPhotoLibraryAddUsageDescription, NSPhotoLibraryUsageDescription and NSMicrophoneUsageDescription in iOS 11 by adding a declaration to the Info.plist file</description>
+    <keywords>cordova, ios, app, security, permissions, nscamerausagedescription, nsphotolibraryaddusagedescription, nsphotolibraryusagedescription</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+        </engines>
+        <platform name="ios">
+            <preference name="CAMERA_USAGE_DESCRIPTION" default="need access to take a snap and upload receipts for expenses"/>
+            <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+                <string>need access to take a snap upload receipts for expenses</string>
+            </config-file>
+
+
+            <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default="need access to upload receipts for expenses from library"/>
+            <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+                <string>need access to upload receipts for expenses from library</string>
+            </config-file>
+            
+           
+            
+            <preference name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" default="need access to save and upload receipts for expenses from library"/>
+            <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
+                <string>need access to save and upload receipts for expenses from library</string>
+            </config-file>
+            
+            <preference name="GEOLOCATION_USAGE_DESCRIPTION" default="need access to location to find Cabs near you"/>
+            <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+                <string>need access to location to find Cabs near you</string>
+            </config-file>
+            
+            
+             <preference name="CALENDAR_USAGE_DESCRIPTION" default="need access to calendar to add upcoming trips"/>
+            <config-file target="*-Info.plist" parent="NSCalendarsUsageDescription">
+                <string>need access to calendar to add upcoming trips</string>
+            </config-file>
+            
+            
+            
+            
+            
+            
+          
+
+            
+        </platform>
+    </plugin>
