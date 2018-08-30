@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <plugin id="cordova-plugin-ios-tg-permissions" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>iOS TG Permissions</name>
-    <author>Andreas Jacob (http://cordobo.com/) --- Sudheer Reddy </author>
+    <author>Andreas Jacob (http://cordobo.com/) --- forked by Sudheer Reddy </author>
     <description>Cordova / PhoneGap Plugin Permission Settings for NSCameraUsageDescription, NSPhotoLibraryAddUsageDescription, NSPhotoLibraryUsageDescription and NSMicrophoneUsageDescription in iOS 11 by adding a declaration to the Info.plist file</description>
     <keywords>cordova, ios, app, security, permissions, nscamerausagedescription, nsphotolibraryaddusagedescription, nsphotolibraryusagedescription</keywords>
     <license>MIT</license>
@@ -38,7 +38,16 @@
                 <string>need access to calendar to add upcoming trips</string>
             </config-file>
             
+            <preference name="MICROPHONE_USAGE_DESCRIPTION" default="need microphone access to help you talk to our AI Bot"/>
+            <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+                <string>TripGain needs microphone access to help you talk to our AI Bot</string>
+            </config-file>
             
+            
+            <preference name="SPEECHRECOGNITION_USAGE_DESCRIPTION" default="need speech recognition access to help you talk to our AI Bot"/>
+            <config-file target="*-Info.plist" parent="NSSpeechRecognitionUsageDescription">
+                <string>TripGain needs speech recognition access to help you talk to our AI Bot</string>
+            </config-file>
             
             
             
